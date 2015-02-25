@@ -1,0 +1,49 @@
+:backend: deckjs
+:deckjs_theme: indigo
+:deckjs_transition: fade
+:navigation:
+:status:
+:goto:
+:menu:
+
+= OpenNMS Workshop
+
+image::images/cc-by4.0.png[float="right",link="http://creativecommons.org/licenses/by/4.0/" ]
+
+== Dozent
+
+- Monitoring und Netzwerkmanagement mit freier Software seit 2005
+- Co-Author link:http://www.dpunkt.de/buecher/3194.html[OpenNMS Netzwerkmanagement mit freier Software]
+- Co-Founder link:http://www.opennms.eu[OpenNMS Foundation Europe e.V.]
+- Freiberuflich beschäftigt mit Schwerpunkt auf OpenNMS
+- GSoC Mentor im OpenNMS Projekt 2010/2011/2012
+
+== Agenda
+
+- Wie installiert man link://www.opennms.org[OpenNMS] und was hat es mit link:https://vagrantup.com[Vagrant] und link:https://www.virtualbox.org[Virtualbox] auf sich?
+- Wie ist OpenNMS aufgebaut?
+- Wie kommen Geräte und Dienste in OpenNMS?
+- Wie kann ich Tests für Dienste konfigurieren?
+- Wie richtet man eine Benachrichtigungen ein?
+- Wie werden Leistungsdaten erfasst?
+
+== Wie installiert man OpenNMS?
+
+- Linux Distributionen: link:https://www.debian.org/[Debian], link:http://www.ubuntu.com/[Ubuntu], link:http://www.centos.org/[CentOS]
+- Datenbank: link:http://www.postgresql.org/[PostreSQL] >9.1
+- Java Runtime environment: link:http://openjdk.java.net/[OpenJDK 1.7] oder link:http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html[Oracle Java 1.7+]
+- Leistungsdaten: link:http://www.rrdtool.org[RRDtool] oder link:https://github.com/OpenNMS/jrobin[JRobin]
+- Repository: link:http://www.opennms.org/wiki/Installation:Debian[APT] und link:http://www.opennms.org/wiki/Installation:Yum[YUM]
+
+== Wie ist OpenNMS aufgebaut?
+
+dies und das
+
+== Wie kommen Geräte und Dienste in OpenNMS?
+
+== Wie kann ich Tests für Dienste konfigurieren?
+
+== Wie richtet man eine Benachrichtigungen ein?
+
+== Wie werden Leistungsdaten erfasst?
+
