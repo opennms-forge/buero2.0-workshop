@@ -113,6 +113,14 @@ td {
     vertical-align: top;
 }
 
+.title {
+    color: #555753;
+    font-size: 85%;
+    padding-top: 20px;
+    font-style: italic;
+    font-family: "Noto Serif","DejaVu Serif",serif;
+}
+
 sub, sup {
     font-size: 75%;
     line-height: 0;
@@ -269,7 +277,8 @@ pre {
     white-space: pre-wrap;
     word-wrap: break-word;
     padding: 1em;
-    border: 1px solid #888;
+    background-color: #eeeeec;
+    /* border: 1px solid #888; */
 }
 
 em {
@@ -302,7 +311,7 @@ h1 {
 }
 
 h2 {
-    color: #c00;
+    color: #3465a4;
     border-bottom-color: #ccc;
 }
 
@@ -338,17 +347,17 @@ blockquote cite {
 }
 
 ::-moz-selection {
-    background: #c00;
+    background: #3465a4;
     color: #fff;
 }
 
 ::selection {
-    background: #c00;
+    background: #3465a4;
     color: #fff;
 }
 
 a, a:hover, a:focus, a:active, a:visited {
-    color: #c00;
+    color: #3465a4;
     text-decoration: none;
 }
 
@@ -388,7 +397,7 @@ a:hover, a:focus {
 }
 
 .deck-prev-link:hover, .deck-prev-link:focus, .deck-next-link:hover, .deck-next-link:focus {
-    background: #c00;
+    background: #3465a4;
     text-decoration: none;
 }
 
