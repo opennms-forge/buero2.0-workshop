@@ -1,8 +1,10 @@
 
 = Compile slides
 
-* Asciidoctor
+* Clone this repository
+* Install link:http://asciidoctor.org/docs/install-toolchain/[Asciidoctor]
 * Download asciidoc backend
+* Compile slides
 
 .Install asciidoctor-backends
 [source, bash]
@@ -13,5 +15,6 @@ git clone https://github.com/asciidoctor/asciidoctor-backends.git
 .Compile to HTML
 [source, bash]
 ----
+cd slides
 asciidoctor -T {path/to/asciidoctor-backends}/haml workshop.adoc
 ----
