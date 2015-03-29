@@ -4,11 +4,13 @@
 * Asciidoctor
 * Download asciidoc backend
 
+.Install asciidoctor-backends
 [source, bash]
 ----
 git clone https://github.com/asciidoctor/asciidoctor-backends.git
 ----
 
+.Compile to HTML
 [source, bash]
 ----
 asciidoctor -T {path/to/asciidoctor-backends}/haml workshop.adoc
