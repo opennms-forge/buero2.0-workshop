@@ -8,6 +8,7 @@ image::images/ronny_right.png[225px, 225px, float="right", link="http://www.open
 
 - Ronny Trommer
 - `_indigo`
+- Workshop powered by: link:http://www.buero20.org[Büro 2.0] - Open Source Co-Working & Expert Network in Berlin
 
 *Zeitvertreib:*
 
