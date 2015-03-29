@@ -16,12 +16,12 @@ image::images/ronny_right.png[225px, 225px, float="right", link="http://www.open
 - Co-Founder link:http://www.opennms.eu[OpenNMS Foundation Europe e.V.]
 - Loves to contribute stuff under free licenses
 - GSoC Mentor for the OpenNMS project in 2010/2011/2012
+- Freifunk Fulda | http://www.freifunk-fulda.de
+- Chaostreff Fulda irc://irc.hackint.org: `#mag.lab` | http://mag.lab
 
 *Contact:*
 
 - OpenNMS channel irc://irc.freenode.org: `#opennms` | http://www.opennms.org
-- Chaostreff Fulda irc://irc.hackint.org: `#mag.lab` | http://mag.lab
-- Freifunk Fulda | http://www.freifunk-fulda.de
 - mailto: ronny@opennms.org
 
 == Material
