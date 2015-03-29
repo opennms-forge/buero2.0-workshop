@@ -6,6 +6,8 @@
 * _Pollerd_ is the component who runs the test, document availability and measures response time
 * Configuration for _Pollerd_ is in `poller-configuration.xml`
 * The shared knowledge between _Provisiond_ and _Pollerd_ is the `service-name`
+* link:http://docs.opennms.org/OpenNMS/snapshot/develop/documentation/guide-admin/[Monitor documentation]
+* link:http://www.opennms.org/wiki/Page_Sequence_Monitor_%28PSM%29_Setup[Page Sequence Monitor]
 
 == Components specific for monitoring in OpenNMS
 
