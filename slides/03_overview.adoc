@@ -1,0 +1,5 @@
+
+// Generic overview
+== What are the components of OpenNMS?
+
+image:images/overview-main-functions.png[]

@@ -1,0 +1,7 @@
+
+= Compile slides
+
+[source, bash]
+----
+asciidoctor -T ../../../dev/asciidoctor-backends/haml workshop.adoc
+----
