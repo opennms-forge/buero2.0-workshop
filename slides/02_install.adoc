@@ -1,0 +1,149 @@
+
+// Install OpenNMS
+== How to install OpenNMS?
+
+*Binary packages*
+
+- Linux Distribution: link:https://www.debian.org/[Debian], link:http://www.ubuntu.com/[Ubuntu], link:http://www.centos.org/[CentOS]
+- Database: link:http://www.postgresql.org/[PostreSQL] >9.1
+- Java Runtime Environment: link:http://openjdk.java.net/[OpenJDK 1.7] oder link:http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html[Oracle Java 1.7+]
+- Performance data: link:http://www.rrdtool.org[RRDtool] oder link:https://github.com/OpenNMS/jrobin[JRobin]
+- OpenNMS Repository for link:http://www.opennms.org/wiki/Installation:Debian[APT] and link:http://www.opennms.org/wiki/Installation:Yum[YUM]
+- German install-guide for OpenNMS at link:http://wiki.ubuntuusers.de/OpenNMS[ubuntuusers]
+
+*Source Code*
+
+- link:http://openjdk.java.net[OpenJDK] or link:http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html[Oracle Java Development Kit] is required
+- link:http://maven.apache.org/download.cgi[Apache Maven] is used to manage external dependencies
+- Source code compile and package: -> http://www.opennms.org/wiki/Installation:Source
+
+== Install on Ubuntu
+
+*Step 1:* Install Java Runtime Environment and PostgreSQL
+
+[source,bash]
+----
+aptitude install openjdk-7-jre-headless
+----
+
+*Optional*: Install the JRE from alternative external link:http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html[PPA Repository].
+
+.Installation PostgreSQL Database Server
+[source,bash]
+----
+aptitude install postgresql-9.3
+----
+
+<<<
+
+*Step 2:* Prepare PostgreSQL Database
+
+.Switch to Postgres user and create an OpenNMS user
+[source,bash]
+----
+root@vagrant:~# su - postgres
+postgres@vagrant:~$ createuser opennms
+----
+
+.Set a password for the OpenNMS and the Postgres user
+[source,bash]
+----
+postgres@vagrant:~$ psql
+postgres=# ALTER USER opennms with password 'geheim';
+ALTER ROLE
+postgres=# ALTER USER postgres with password 'geheim';
+ALTER ROLE
+postgres=# \q
+postgres@vagrant:~$ exit
+logout
+root@vagrant:~#
+----
+
+<<<
+
+*Step 3:* Add OpenNMS Repositories and install OpenNMS
+
+.Source list: `/etc/apt/sources.list.d/opennms.list`
+[source,bash]
+----
+# contents of /etc/apt/sources.list.d/opennms.list
+deb http://debian.opennms.org stable main
+deb-src http://debian.opennms.org stable main
+----
+
+TIP: If you try to install from Europe, you can use `{debian,yum}.opennms.eu` as repository server.
+
+.Install GPG Key to verify packages
+[source,bash]
+----
+wget -O - http://debian.opennms.org/OPENNMS-GPG-KEY | sudo apt-key add -
+----
+
+.Update the repository data
+[source,bash]
+----
+root@vagrant:~# aptitude update
+root@vagrant:~# aptitude install opennms
+----
+
+<<<
+
+*Step 4:* Setup the Java Environment for OpenNMS
+
+[source,bash]
+----
+root@vagrant:~# cd /usr/share/opennms/bin
+root@vagrant:~# ./runjava -s
+
+root@vagrant:~# update-alternatives --list java
+/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+
+# Set as JAVA_HOME in /etc/default/opennms
+root@vagrant:~# cat /etc/default/opennms
+JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+----
+
+<<<
+
+*Step 5:* Configure OpenNMS database access and initialize the database
+
+.Set the authentication for the database in `/etc/opennms/opennms-datasources.xml`
+[source,xml]
+----
+<jdbc-data-source name="opennms"
+                  database-name="opennms"
+                  class-name="org.postgresql.Driver"
+                  url="jdbc:postgresql://localhost:5432/opennms"
+                  user-name="opennms"
+                  password="geheim" /><1>
+
+  <jdbc-data-source name="opennms-admin"
+                  database-name="template1"
+                  class-name="org.postgresql.Driver"
+                  url="jdbc:postgresql://localhost:5432/template1"
+                  user-name="postgres"
+                  password="geheim" /><2>
+----
+<1> OpenNMS user password for access to the OpenNMS database
+<2> Postgres user and password to allow schema changes in updates
+
+.Initialize OpenNMS database schema
+[source,bash]
+----
+root@vagrant:~# cd /usr/share/opennms/bin
+root@vagrant:~# ./install -dis
+----
+
+<<<
+
+*Step 6:* Start OpenNMS and launch a browser to access the WebUI.
+
+[source,bash]
+----
+root@vagrant:~# service opennms start
+----
+
+Browser: http://<ip-adresse>:8980
+
+Login: _admin_ +
+Password: _admin_
