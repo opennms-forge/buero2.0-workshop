@@ -1,7 +1,15 @@
 
 = Compile slides
 
+* Asciidoctor
+* Download asciidoc backend
+
 [source, bash]
 ----
-asciidoctor -T ../../../dev/asciidoctor-backends/haml workshop.adoc
+git clone https://github.com/asciidoctor/asciidoctor-backends.git
+----
+
+[source, bash]
+----
+asciidoctor -T {path/to/asciidoctor-backends}/haml workshop.adoc
 ----
