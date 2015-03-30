@@ -19,7 +19,7 @@ image:images/overview-provisioning.png[]
 * Provisiond allows grouping of nodes in _Requisitions_
 * _Requisitions_ allow to build monitoring profiles, e.g. Mail server with detectors for SMTP
 * Monitoring profile for web server with detectors for HTTP
-* _Policies_ can be assigned to _Requisitions_, z.B. sort Nodes based on rules into categories
+* _Policies_ can be assigned to _Requisitions_, e.g. sort Nodes based on rules into categories
 * Configuration: `provisiond-configuration.xml`, `imports/` adn `foreign-sources/`
 * _SNMP communities_ are system wide per IP-Address configures, e.g. _Provisiond_, _Pollerd_, SNMP-Traps, _Collectd_
 

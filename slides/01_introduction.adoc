@@ -14,6 +14,7 @@ image::images/ronny_right.png[225px, 225px, float="right", link="http://www.open
 
 - Monitoring und Netzwerkmanagement mit freier Software seit 2005
 - Co-Author link:http://www.dpunkt.de/buecher/3194.html[OpenNMS Netzwerkmanagement mit freier Software]
+- Working for link:http://www.opennms.com[The OpenNMS Group, Inc.] as GPL freelancer
 - Co-Founder link:http://www.opennms.eu[OpenNMS Foundation Europe e.V.]
 - Loves to contribute stuff under free licenses
 - GSoC Mentor for the OpenNMS project in 2010/2011/2012
