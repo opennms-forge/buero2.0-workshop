@@ -21,7 +21,7 @@ image:images/overview-provisioning.png[]
 * Monitoring profile for web server with detectors for HTTP
 * _Policies_ can be assigned to _Requisitions_, e.g. sort Nodes based on rules into categories
 * Configuration: `provisiond-configuration.xml`, `imports/` adn `foreign-sources/`
-* _SNMP communities_ are system wide per IP-Address configures, e.g. _Provisiond_, _Pollerd_, SNMP-Traps, _Collectd_
+* _SNMP communities_ are system wide configured per IP-Address, i.e. _Provisiond_, _Pollerd_, SNMP-Traps, _Collectd_
 
 <<<
 
