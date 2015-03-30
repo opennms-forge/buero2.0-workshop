@@ -17,9 +17,9 @@ image:images/overview-provisioning.png[]
 ** Services for management protocols, e.g. is the BIOS status over WMI available or is possible to test the status of Fans in a switch.
 
 * Provisiond allows grouping of nodes in _Requisitions_
-* _Requisitions_ allow to build monitoring profiles, e.g. Mailserver with detectors for SMTP
+* _Requisitions_ allow to build monitoring profiles, e.g. Mail server with detectors for SMTP
 * Monitoring profile for web server with detectors for HTTP
-* _Policies_ can be assigned to _Requistions_, z.B. sort Nodes based on rules into categories
+* _Policies_ can be assigned to _Requisitions_, z.B. sort Nodes based on rules into categories
 * Configuration: `provisiond-configuration.xml`, `imports/` adn `foreign-sources/`
 * _SNMP communities_ are system wide per IP-Address configures, e.g. _Provisiond_, _Pollerd_, SNMP-Traps, _Collectd_
 
@@ -31,7 +31,7 @@ image:images/overview-requisition.png[]
 
 * _Discovery_ is a daemon who scans IP spaces
 * Every respond based on ICMP is forwarded in a event to _Provisiond_ for further investigation
-* _Provisiond_ investiates new suspect IP adressses with detectors and SNMP
+* _Provisiond_ investigates new suspect IP adresses with detectors and SNMP
 * It is possible to set `foreign-source=MyNetworkName` to a specific IP range to organize discovered nodes in a _Requisition_
 * IP ranges for _Discovery_ daemon are configured in `discovery-configuration.xml`
 

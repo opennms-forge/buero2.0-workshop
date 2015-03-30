@@ -513,7 +513,7 @@
               <y:Geometry height="51.25" width="127.5" x="1639.5581288721971" y="48.128577940849254"/>
               <y:Fill color="#D3D7CF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Helvetica Neue" fontSize="20" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="27.30000114440918" modelName="custom" textColor="#000000" visible="true" width="111.79999542236328" x="7.850002288818359" y="11.97499942779541">Ticetsystem<y:LabelModel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Helvetica Neue" fontSize="20" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="27.30000114440918" modelName="custom" textColor="#000000" visible="true" width="122.18000030517578" x="2.6599998474121094" y="11.97499942779541">Ticketsystem<y:LabelModel>
                   <y:SmartNodeLabelModel distance="4.0"/>
                 </y:LabelModel>
                 <y:ModelParameter>
@@ -1047,7 +1047,6 @@ for WebUI or Reporting<y:LabelModel>
       </data>
     </edge>
     <edge id="n12::e4" source="n12::n1" target="n12::n3">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
